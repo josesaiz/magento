@@ -7,14 +7,14 @@
 		</block>
 
 		<block type="core/text_list" name="content" />
+	</block>
+	
+	
+	<reference name="content">
+		<block type="core/text" name="goodbye">
+			<action method="setText"><text> The lazy dog was only faking it. </text></action>
+		</block>
 		
-	</block>	
-	    <reference name="content">
-        <block type="core/text" name="goodbye">
-            <action method="setText">
-                <text> The lazy dog was only faking it. </text>
-            </action>
-        </block>
-
-    </reference>  
+	</reference>
+	
 </layout>

@@ -1,5 +1,5 @@
 <?php
-/**
+/** Pruebas Git
  * Magento
  *
  * NOTICE OF LICENSE
@@ -64,7 +64,7 @@ if (!file_exists($mageFilename)) {
 if (file_exists($maintenanceFile)) {
     include_once dirname(__FILE__) . '/errors/503.php';
     exit;
-}
+} 
 
 require_once $mageFilename;
 

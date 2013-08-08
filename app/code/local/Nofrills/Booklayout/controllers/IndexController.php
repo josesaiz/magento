@@ -27,7 +27,7 @@ class Nofrills_Booklayout_IndexController  extends Mage_Core_Controller_Front_Ac
 // 		$main_block->setChild('the_first',$paragraph_block);
 // 		echo $main_block->toHtml();	
 //		END
-/*
+
 		$block_1 = new Mage_Core_Block_Text();
 		$block_1->setText('Original Text');
 
@@ -42,30 +42,7 @@ class Nofrills_Booklayout_IndexController  extends Mage_Core_Controller_Front_Ac
 		
 		$block_1->setText('Wait, I want this text instead.');
 		echo $main_block->toHtml();	
-*/
-		
-		$layout = Mage::getSingleton('core/layout');                        
-    	//Bien es la forma correcta
-		$xml = simplexml_load_string('<layout>
-        <block type="nofrills_booklayout/helloworld" 
-        name="root" output="toHtml" />
-        </layout>','Mage_Core_Model_Layout_Element');
-		//Mal pero no da error
-    	$xml2 = new SimpleXMLElement('<layout>
-        <block type="nofrills_booklayout/helloworld" 
-        name="root" output="toHtml" />
-        </layout>');
-    	//Bien
-		$xml3 = new Mage_Core_Model_Layout_Element('<layout>
-        <block type="nofrills_booklayout/helloworld" 
-        name="root" output="toHtml" />
-        </layout>');
-    	//$layout->setXml($xml2);
-    	
-   
-    	$layout->setXml($xml);
-    	$layout->generateBlocks();          
-    	echo $layout->setDirectOutput(true)->getOutput();   
+
 	}
 	
 	public function helloblockAction()
