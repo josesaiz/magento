@@ -100,20 +100,13 @@
 		public function layoutfilesAction()
 		{
 			$updatesRoot = Mage::app()->getConfig()->getNode('frontend/layout/updates');
-			echo "1_".(string)Mage::app();
-			echo "2_".(string)Mage::app()->getConfig();			
-			echo "3_".(string)$updatesRoot;
 			$updateFiles = array();
 			foreach ($updatesRoot->children() as $updateNode) {
-				echo "<<>>".(string)$updateNode->file."<<>><br>";
 				if ($updateNode->file) {
 					$module = $updateNode->getAttribute('module');
-					echo "--".$module."--<br>";
 					if ($module && Mage::getStoreConfigFlag('advanced/modules_disable_output/' . $module)) {
-						echo "------------------- Me salto el modulo deshabilitado:".$module." ------------------------------<br>";
 						continue;
 					}
-					echo "==".(string)$updateNode->file."==<br>";
 					$updateFiles[] = (string)$updateNode->file;
 				}
 			}

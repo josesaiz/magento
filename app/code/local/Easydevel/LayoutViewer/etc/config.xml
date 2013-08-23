@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Easydevel_LayoutViewer>
+            <version>0.1.0</version>
+        </Easydevel_LayoutViewer>
+    </modules>
+  	<global>   
+		<models>
+			<easydevel_layoutviewer>
+				<class>Easydevel_LayoutViewer_Model</class>
+			</easydevel_layoutviewer>
+			<core>
+				<rewrite>
+					<layout_update>Easydevel_LayoutViewer_Model_Layout_Update</layout_update>
+				</rewrite>
+			</core>
+		</models>
+    	<events>
+            <controller_action_postdispatch>
+                <observers>
+                    <easydevel_layoutviewer_model_observer>
+                        <type>singleton</type>
+                        <class>Easydevel_LayoutViewer_Model_Observer</class>
+                        <method>checkForLayoutDisplayRequest</method>
+                    </easydevel_layoutviewer_model_observer>
+                </observers>
+            </controller_action_postdispatch>
+        </events>
+    </global>
+</config>

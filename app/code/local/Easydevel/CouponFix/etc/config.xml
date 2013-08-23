@@ -1,0 +1,21 @@
+<config>
+    <modules>
+            <Easydevel_CouponFix>
+                    <version>0.1.0</version>
+            </Easydevel_CouponFix>
+    </modules>
+    <global>
+    <events>
+        <sales_order_payment_cancel>
+        <observers>
+          <easydevel_couponfix_observer>
+            <type>singleton</type>
+            <class>Easydevel_CouponFix_Model_Observer</class>
+            <method>cancel</method>
+          </easydevel_couponfix_observer>
+        </observers>
+        </sales_order_payment_cancel>    
+    </events>
+    
+    </global>
+</config>

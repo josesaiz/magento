@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <default>
+ 
+    </default>
+    <helloworld_index_index>
+    	<reference name="root">
+            <action method="setTemplate">
+                <template>easydevel/helloworld/simple_page.phtml</template>
+            </action>
+            <block type="page/template_links" name="top.links"/>
+            <block type="customer/form_register" name="customer_form_register" template="customer/form/register.phtml"/>
+        </reference>
+    	<!-- 
+    	<block type="page/html"  name="root" output="toHtml" template="easydevel/helloworld/simple_page.phtml" >
+    		<block type="customer/form_register" name="customer_form_register"/>
+    		<block type="page/template_links" name="top.links" template="page/template/links.phtml"/>
+    	</block>
+    	 -->
+    	<reference name="top.links">
+            <action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>10</position></action>
+         	<action method="addLink" translate="label title" module="customer">
+            	<label>Log Out</label>
+            	<url helper="customer/getLogoutUrl"/>
+            	<title>Log Out</title>
+            	<prepare/>
+            	<urlParams/><position>100</position>
+            </action>
+
+	    	<action method="addLink" translate="label title" module="customer">
+		        <label>example</label>
+		        <url>http://myotherexampledomain.com</url> 
+		        <title>example</title>
+		        <prepare/> 
+		        <urlParams/> 
+		        <position>100</position>
+		        <liParams/>
+		        <aParams>class="top-link-example"</aParams>
+		        <beforeText></beforeText>
+		        <afterText></afterText>
+	    	</action>
+        </reference>
+    </helloworld_index_index>
+    <helloworld_index_goodbye>
+        <!-- <update handle="helloworld_index_index" /> -->
+    </helloworld_index_goodbye>
+
+</layout>

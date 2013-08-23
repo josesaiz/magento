@@ -1,43 +1,108 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
-
-<nofrills_booklayout_package_index>
-	<reference name="content">
-		<block type="core/text" name="planet_4">
-			<action method="setText">
-				<text>Hello Mars </text>
-			</action>
-		</block>
-	</reference>
-	<update handle ="nofrills_booklayout_package_second" />
-</nofrills_booklayout_package_index>
-
-<nofrills_booklayout_package_second>
-	<reference name="content">
-		<block type="core/text" name="planet_5">
-			<action method="setText">
-				<text>Hello Jupiter </text>
-			</action>
-		</block>
-	</reference>
+	<nofrills_booklayout_package_index>
+		<reference name="content">
+			<block type="core/text" name="our_message">
+				<action method="setText"><text>Hello Mars</text></action>
+			</block>
+		</reference>
+	</nofrills_booklayout_package_index>
 	
-</nofrills_booklayout_package_second>
-
-<nofrills_booklayout_package_second>
-	<reference name ="root">
-		<action method ="setTemplate">
-			<template>page/2columns-right.phtml</template>
-		</action>
-	</reference>
-</nofrills_booklayout_package_second>
-
-<default >
-	<reference name ="content">
-		<block type ="core/text" name ="for_everyone">
-			<action method ="setText">
-				<text>I am on all pages!  </text>
+	<nofrills_booklayout_package_second>
+		<reference name="content">
+			<block type="core/text" name="our_message">
+				<action method="setText"><text>Hello Jupiter</text></action>
+			</block>                        
+		</reference>
+	</nofrills_booklayout_package_second>   
+	
+	<nofrills_booklayout_package_second>    
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+	</nofrills_booklayout_package_second>
+<nofrills_booklayout_order_index>
+    <reference name="content">
+        <block type="core/text" name="one">
+            <action method="setText">
+                <text><![CDATA[<p>One</p>]]></text>
+            </action>
+        </block>
+        <block type="core/text" name="two">
+            <action method="setText">
+                <text><![CDATA[<p>Two</p>]]></text>
+            </action>
+        </block>
+        <block type="core/text" name="three">
+            <action method="setText">
+                <text><![CDATA[<p>Three</p>]]></text>
+            </action>
+        </block>
+        <block type="core/text" name="four">
+            <action method="setText">
+                <text><![CDATA[<p>Four</p>]]></text>
+            </action>
+        </block>
+        <block type="core/text" name="five">
+            <action method="setText">
+                <text><![CDATA[<p>Five</p>]]></text>
+            </action>
+        </block>            
+        <block type="core/text" name="six">
+            <action method="setText">
+                <text><![CDATA[<p>Six</p>]]></text>
+            </action>
+        </block>                        
+        <block type="core/text" name="seven">
+            <action method="setText">
+                <text><![CDATA[<p>Seven</p>]]></text>
+            </action>
+        </block>
+                                    
+		<block type="core/text" name="line" before="five">
+		    <action method="setText">
+		    	<text><![CDATA[<hr/>]]></text>
+		    </action>
+		</block>
+	
+		                                
+		<block type="core/text" name="line" after="-">  
+			<action method ="setText" >
+				<text><![CDATA[<hr/>]]>one<![CDATA[<hr/>]]></text>
+			
 			</action>
 		</block>
-	</reference>
-</default>
+		<block type="core/text" name="fakeline" after="four">
+	        <action method="setText">
+	            <text><![CDATA[<div style="border-color:black;
+	            border-style:solid;border-top:1px;width:300px;">llllloooooooooool</div>]]>
+	            </text>
+	        </action>
+    	</block>
+		<!--  
+		<action method ="unsetChild" >
+			<name>one</name>
+		</action>
+		<block type ="core/text" name ="one" after ="-">
+			<action method ="setText" >
+				<t>one</t>
+			</action>
+		</block>
+		-->                                               
+    </reference>
+</nofrills_booklayout_order_index>
+
+    <nofrills_booklayout_order_index>    
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+	</nofrills_booklayout_order_index>
+    <default>
+        <reference name="content">
+            <block type="core/text" name="for_everyone">
+                <action method="setText"><text>I am on all  pages! </text></action>
+            </block>                        
+        </reference>        
+    </default>
+    
 </layout>

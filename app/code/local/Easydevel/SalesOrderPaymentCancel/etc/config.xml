@@ -1,0 +1,21 @@
+<config>
+    <modules>
+            <Easydevel_SalesOrderPaymentCancel>
+                    <version>0.1.0</version>
+            </Easydevel_SalesOrderPaymentCancel>
+    </modules>
+    <global>
+    <events>
+        <sales_order_payment_cancel>
+        <observers>
+          <easydevel_salesorderpaymentcancel_observer>
+            <type>singleton</type>
+            <class>Easydevel_SalesOrderPaymentCancel_Model_Observer</class>
+            <method>cancel</method>
+          </easydevel_salesorderpaymentcancel_observer>          
+        </observers>
+        </sales_order_payment_cancel>    
+    </events>
+
+    </global>
+</config>

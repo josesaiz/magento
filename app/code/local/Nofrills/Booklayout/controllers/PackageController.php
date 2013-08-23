@@ -4,8 +4,8 @@
 		public function loadLayout($handles=null, $generateBlocks=true, $generateXml=true)		
 		{
 			$original_results = parent::loadLayout($handles,$generateBlocks,$generateXml);
-			$handles = Mage::getSingleton('core/layout')->getUpdate()->getHandles();
-			echo "<strong>Handles Generated For This Request: <br/>\n",implode("<br/>\n",$handles),"</strong>";
+			//$handles = Mage::getSingleton('core/layout')->getUpdate()->getHandles();
+			//echo "<strong>Handles Generated For This Request: <br/>\n",implode("<br/>\n",$handles),"</strong>";
 			
 			return $original_results;
 		}

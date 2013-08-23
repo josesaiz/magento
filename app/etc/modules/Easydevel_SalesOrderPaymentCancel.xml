@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Easydevel_SalesOrderPaymentCancel>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Easydevel_SalesOrderPaymentCancel>
+    </modules>
+</config> 

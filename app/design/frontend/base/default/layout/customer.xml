@@ -50,7 +50,28 @@ Default layout, loads most of the pages
         <!-- Mage_Customer -->
         <reference name="top.links">
             <action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>10</position></action>
+         <action method="addLink" translate="label title" module="customer">
+            	<label>Log Out</label>
+            	<url helper="customer/getLogoutUrl"/>
+            	<title>Log Out</title>
+            	<prepare/>
+            	<urlParams/><position>100</position>
+            </action>
+
+	    	<action method="addLink" translate="label title" module="customer">
+		        <label>example</label>
+		        <url>http://myotherexampledomain.com</url> 
+		        <title>example</title>
+		        <prepare/> 
+		        <urlParams/> 
+		        <position>100</position>
+		        <liParams/>
+		        <aParams>class="top-link-example"</aParams>
+		        <beforeText></beforeText>
+		        <afterText></afterText>
+	    	</action>
         </reference>
+        
     </default>
 
 <!--
@@ -59,7 +80,15 @@ Load this update on every page when customer is logged in
 
     <customer_logged_in>
         <reference name="top.links">
-            <action method="addLink" translate="label title" module="customer"><label>Log Out</label><url helper="customer/getLogoutUrl"/><title>Log Out</title><prepare/><urlParams/><position>100</position></action>
+            <action method="addLink" translate="label title" module="customer">
+            	<label>Log Out</label>
+            	<url helper="customer/getLogoutUrl"/>
+            	<title>Log Out</title>
+            	<prepare/>
+            	<urlParams/><position>100</position>
+            </action>
+           
+		
         </reference>
     </customer_logged_in>
 

@@ -150,4 +150,15 @@
     <varien>
         <class>Varien</class>
     </varien>
+    <frontend>
+        <routers>
+            <helloworld>
+                <use>standard</use>
+                <args>
+                    <module>Easydevel_HelloWorld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </helloworld>
+        </routers>  
+    </frontend>
 </config>
