@@ -1,0 +1,45 @@
+<config>
+    <modules>
+        <Easydevel_Weblog>
+            <version>0.1.0</version>
+        </Easydevel_Weblog>
+    </modules>
+	<frontend>
+	    <routers>
+	        <weblog>
+	            <use>standard</use>
+	            <args>
+	                <module>Easydevel_Weblog</module>
+	                <frontName>weblog</frontName>
+	            </args>
+	        </weblog>
+	    </routers>
+	</frontend>
+	<global>
+	    <!-- ... -->
+	    <models>
+	        <weblog>
+	            
+	            <class>Easydevel_Weblog_Model</class> 
+	            
+	            <!--
+	            need to create our own resource, cant just
+	            use core_resource
+	            -->
+	            <resourceModel>weblog_resource</resourceModel>
+	            
+	        </weblog>
+	      
+	        <weblog_resource>
+            	<class>Easydevel_Weblog_Model_Resource</class>
+            	<entities>
+	                <blogpost>
+	                    <table>blog_posts</table>
+	                </blogpost>
+            	</entities>
+        	</weblog_resource>
+        	
+	    </models>
+	    <!-- ... -->
+	</global>
+</config>
