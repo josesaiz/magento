@@ -1,7 +1,7 @@
 <config>
     <modules>
         <Easydevel_Weblog>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </Easydevel_Weblog>
     </modules>
 	<frontend>
@@ -37,9 +37,16 @@
 	                    <table>blog_posts</table>
 	                </blogpost>
             	</entities>
-        	</weblog_resource>
-        	
+        	</weblog_resource>        	
 	    </models>
+	    <resources>
+		    <weblog_setup>
+			    <setup>
+				    <module>Easydevel_Weblog</module>
+				    <class>Easydevel_Weblog_Model_Resource_Setup</class>
+			    </setup>
+	        </weblog_setup>
+        </resources>
 	    <!-- ... -->
 	</global>
 </config>

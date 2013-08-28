@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Easydevel_ComplexWorld>
+            <version>0.1.0</version>
+        </Easydevel_ComplexWorld>
+    </modules>
+	<frontend>
+	    <routers>
+	        <complexworld>
+	            <use>standard</use>
+	            <args>
+	                <module>Easydevel_ComplexWorld</module>
+	                <frontName>complexworld</frontName>
+	            </args>
+	        </complexworld>
+	    </routers>
+	</frontend>
+	<global>
+	    <!-- ... -->
+	    <models>
+	        <complexworld>
+	            
+	            <class>Easydevel_ComplexWorld_Model</class> 
+	            
+	            <!--
+	            need to create our own resource, cant just
+	            use core_resource
+	            -->
+	            <resourceModel>complexworld_resource</resourceModel>
+	            
+	        </complexworld>
+				      
+	        <complexworld_resource>
+            	<class>Easydevel_ComplexWorld_Model_Resource</class>
+            	<entities>
+	                <eavblogpost>
+	                    <table>eavblog_posts</table>
+	                </eavblogpost>
+            	</entities>
+        	</complexworld_resource>
+        	      	
+	    </models>
+	    <resources>
+		    <complexworld_setup>
+			    <setup>
+				    <module>Easydevel_ComplexWorld</module>
+				    <class>Easydevel_ComplexWorld_Model_Resource_Setup</class>
+			    </setup>
+	        </complexworld_setup>
+        </resources>
+	    <!-- ... -->
+	</global>
+</config>
